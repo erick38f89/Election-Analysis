@@ -25,27 +25,32 @@ The election winner was Diana DeGette, getting a total 272,893 votes, resulting 
 #Election-Audit Summary
 
   This analysis was used with code written in the Python language by accessing the data with a csv file and writting it into a txt file. We were able to perform this analysis by declaring variables for the total votes, the candidates options and corresponding votes as well as the county options and corresponding votes. As well as variables to determine the winning candidates, votes total and percentages as it follows:
-  
-# Add a variable to load a file from a path.
-file_to_load = os.path.join("Resources", "election_results.csv")
-# Add a variable to save the file to a path.
-file_to_save = os.path.join("analysis", "election_analysis.txt")
 
-# Initialize a total vote counter.
-total_votes = 0
 
-# Candidate Options and candidate votes.
-candidate_options = []
-candidate_votes = {}
+     # Add a variable to load a file from a path.
+    file_to_load = os.path.join("Resources", "election_results.csv")
+    # Add a variable to save the file to a path.
+    file_to_save = os.path.join("analysis", "election_analysis.txt")
+    
+    # Initialize a total vote counter.
+    total_votes = 0
 
-# 1: Create a county list and county votes dictionary.
-county_names = []
-county_votes = {}   
+    # Candidate Options and candidate votes.
+    candidate_options = []
+    candidate_votes = {}
 
-# Track the winning candidate, vote count and percentage
-winning_candidate = ""
-winning_count = 0
-winning_percentage = 0
+    # 1: Create a county list and county votes dictionary.
+    county_names = []
+    county_votes = {}   
+
+    # Track the winning candidate, vote count and percentage
+    winning_candidate = ""
+    winning_count = 0
+    winning_percentage = 0
+
+    # 2: Track the largest county and county voter turnout.
+    largest_county_turnout = ""
+    largest_county_vote = 0
 
   This code can be used given any dataset with a similar format to determine this facts for election counts.
 
@@ -92,4 +97,4 @@ winning_percentage = 0
          # 6e: Save the county votes to a text file.
         txt_file.write(county_results)
         
-  Just by modifying the source csv file. This can be applied to any votes lists to determine the local distribution, candidates votes and winner. We can use this for low to high turnout elections, such as a school student board for a lower vote example and up to a medium city major and commissions election.
+  Just by modifying the source csv file and the containing folder so it matches for the new analysis, this can be applied to any votes lists to determine the local distribution, candidates votes and winner. We can use this for low to high turnout elections, such as a school student board for a lower vote example and up to a medium city major and commissions election.
